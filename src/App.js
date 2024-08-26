@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header';
+import Category from './components/Category';
+import useFetch from './hooks/useFetch';
 import './App.css';
 
-function App() {
+const App = () => {
+  const { data: products, loading, error } = useFetch('http://localhost:5000/products');
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
+  const categories = products.reduce((acc, product) => {
+    if (!acc[product.product_category]) {
+      acc[product.product_category] = [];
+    }
+    acc[product.product_category].push(product);
+    return acc;
+  }, {});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div className="container">
+        {Object.keys(categories).map(category => (
+          <Category key={category} category={category} products={categories[category]} />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
