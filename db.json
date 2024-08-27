@@ -4,25 +4,33 @@
             "product_id": 1,
             "product_name": "Iphone 14",
             "product_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "product_category": "Smart Phones"
+            "product_category": "Smart Phones",
+            "product_price": "$900",
+            "product_image": "./public/logo192.png"
         },
         {
             "product_id": 2,
             "product_name": "Iphone 13 Pro Max",
             "product_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "product_category": "Smart Phones"
+            "product_category": "Smart Phones",
+            "product_price": "$750",
+            "product_image": "./public/logo192.png"
         },
         {
             "product_id": 3,
             "product_name": "Apple",
             "product_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "product_category": "Laptop"
+            "product_category": "Laptop",
+            "product_price": "$1200",
+            "product_image": "./public/logo192.png"
         },
         {
             "product_id": 4,
             "product_name": "Dell",
             "product_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "product_category": "Laptop"
+            "product_category": "Laptop",
+            "product_price": "$1000",
+            "product_image": "./public/logo192.png"
         }
     ]
 }
