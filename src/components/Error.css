@@ -1,0 +1,30 @@
+.error {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.error h1 {
+    font-size: 3em;
+    color: #ff6347;
+}
+
+.error p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.error button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.error button:hover {
+    background-color: #ff4500;
+}

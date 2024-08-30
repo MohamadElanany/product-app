@@ -1,11 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Error from './Error';
+
 
 const ProductDetails = ({ products }) => {
     const { id } = useParams();
     const product = products.find(p => p.product_id === parseInt(id));
 
-    if (!product) return <p>Product not found</p>;
+    if (!product) {
+        return <Error message="Product not found. Please check the URL or try again later." />;
+    }
 
     return (
         <div>
